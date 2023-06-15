@@ -40,7 +40,7 @@ public class ContaEspecial extends ContaBancaria {
             this.setSaldo(this.getSaldo() - valor);
             System.out.printf("\nO valor de R$%.2f foi sacado, o novo saldo é %.2f", valor, this.getSaldo());
 
-        } else if ((this.getSaldo() + this.limite) - valor > 0) {
+        } else if ((this.getSaldo() + this.limite) - valor >= 0) {
             this.limite -= getSaldo() > 0 ? valor - this.getSaldo() : valor;
             this.setSaldo(this.getSaldo() - valor);
             System.out.printf("\nO valor de R$%.2f foi sacado, o novo saldo é %.2f e resta %.2f de limite", valor,
